@@ -147,12 +147,97 @@ a {
     gap: 20px;
 }
 
-.header-navbar__link{
+.header-navbar__link {
     display: block;
     padding: 20px 10px;
     font-size: 1.125rem;
 
 
+}
+
+/*SKILLS - вторая страница*/
+
+.skills {
+    padding: 10px;
+}
+
+.skills__container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-height: 691px) {
+    .skills__container {
+        grid-auto-rows: calc(33.3333vh - 13.3333px);
+    }
+}
+
+@media (max-height: 690px) {
+    .skills__container {
+        grid-auto-rows: calc(230px - 13.3333px);
+    }
+}
+
+.skills__actions {
+}
+
+.skill-item {
+    position: relative;
+}
+
+.skill-item__title {
+
+}
+
+.skill-item__link {
+}
+
+.skill-item__image {
+    position: absolute;
+    background-color: #2d3651;
+    inset: 0;
+
+}
+
+.skill-item__overlay {
+}
+
+.skill-item:nth-of-type(1) {
+    grid-area: a1;
+}
+
+.skill-item:nth-of-type(2) {
+    grid-area: a2;
+}
+
+.skill-item:nth-of-type(3) {
+    grid-area: a3;
+}
+
+.skill-item:nth-of-type(4) {
+    grid-area: a4;
+}
+
+.skill-item:nth-of-type(5) {
+    grid-area: a5;
+}
+
+.skill-item:nth-of-type(6) {
+    grid-area: a6;
+}
+
+.skill-item:nth-of-type(7) {
+    grid-area: a7;
+}
+
+.skill-item:nth-of-type(8) {
+    grid-area: a8;
+}
+
+.skill-item:nth-of-type(9) {
+    grid-area: a9;
 }
 
 @media (min-width: 768px) {
