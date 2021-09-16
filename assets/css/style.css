@@ -27,10 +27,9 @@ a {
 }
 
 .btn {
-    width: 250px;
+    /*width: 250px;*/
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid #ffffff;
+
     padding-left: 1em;
     padding-right: 1em;
     display: flex;
@@ -44,6 +43,17 @@ a {
 .btn:hover,
 .btn:focus {
     background-color: #d66926;
+}
+
+.btn--light{
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffffff;
+}
+.btn--primary{
+    width: 350px;
+    background-color: rgba(45, 54, 81, 0.8);
+    border: 2px solid #2d3651;
 }
 
 /*Основной блок обертка для первого экрана*/
@@ -181,27 +191,64 @@ a {
 }
 
 .skills__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .skill-item {
     position: relative;
+    overflow: hidden;
 }
 
-.skill-item__title {
+.skill-item:hover .skill-item__link{
+    color: #d66926;
+}
 
+.skill-item:hover .skill-item__image{
+    transform: scale(1.1);
+}
+
+.skill-item:hover .skill-item__overlay{
+    opacity: 0.95;
+}
+
+
+.skill-item__title {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    /*background-color: red;*/
+    margin: 0;
+    font-size: 1.25rem;
 }
 
 .skill-item__link {
+    /*background-color: red;*/
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.5s;
 }
 
 .skill-item__image {
     position: absolute;
     background-color: #2d3651;
     inset: 0;
-
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 0.5s transform;
 }
 
 .skill-item__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #2d3651;
+    opacity: 0.8;
+    transition: opacity 0.5s;
 }
 
 .skill-item:nth-of-type(1) {
